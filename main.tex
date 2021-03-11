@@ -1,0 +1,113 @@
+\input{modelo}
+%%%%%%%%%%%%%%%%INICIO%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\input{capa.tex}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\thispagestyle{empty}
+%\includepdf{ficha.pdf}
+
+\newpage
+\thispagestyle{empty}
+%\includepdf{folha.pdf}
+\input{folha-de-aprovacao}
+
+%\newpage
+%\thispagestyle{empty}
+%\input{agradecimentos.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\thispagestyle{empty}
+\vspace*{20cm}
+    \hspace{.45\textwidth} %posiciona a minipage
+   \begin{minipage}{.5\textwidth}
+   \onehalfspacing 
+   \textit{"Frase".}\\[1cm]
+\begin{flushright}
+(Autor desconhecido)
+\end{flushright}
+  \end{minipage}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage % Resumo
+\thispagestyle{empty}
+\begin{center}
+\textbf{RESUMO}
+\end{center}
+\vspace{1cm}
+
+\noindent Texto....Texto....Texto....
+
+
+
+\vspace{1cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent \textbf{Palavras-chaves}: Uma, duas, três. 
+\newpage % Resumo em inglês
+\thispagestyle{empty}
+\begin{center}
+\textbf{ABSTRACT} 
+\end{center}
+\vspace{1cm}
+
+\noindent Text...Text...
+
+
+\vspace{1cm}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\noindent \textbf{Keywords}:
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\thispagestyle{empty}
+\begin{spacing}{1.5}
+\listoffigures
+\end{spacing}
+\thispagestyle{empty}
+\newpage
+\clearpage
+\thispagestyle{empty}
+\pagestyle{empty} % tira a numeração das paginas seguinntes
+\cleardoublepage
+\begin{spacing}{1.5}
+\tableofcontents
+\end{spacing}
+\clearpage
+\cleardoublepage
+\pagestyle{myheadings}
+\markright{}  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\input{introducao.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\input{capitulo2.tex}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\newpage
+%\input{}
+
+
+
+\newpage
+\input{conclusao.tex}
+
+
+\newpage
+\addcontentsline{toc}{section}{REFER\^ENCIAS} 
+%\bibliographystyle{abnt-alf}
+\bibliographystyle{abntex2-alf}
+\bibliography{biblioteca}
+
+%\newpage
+%\appendix
+%\addcontentsline{toc}{section}{ANEXOS} 
+%\section*{ANEXO 1}
+
+
+%\newpage
+%\addcontentsline{toc}{section}{APÊNDICE} 
+%\section*{APÊNDICE: CÓDIGO EM MATLAB }
+%\input{codigo-boost.tex}
+
+\end{document}

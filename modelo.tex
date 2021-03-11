@@ -1,0 +1,196 @@
+%% deifnições das normas do pdf
+
+\documentclass[12pt, a4paper]{ltxdoc}
+\usepackage[T1]{fontenc}		
+\usepackage[utf8]{inputenc}	%Codificação UTF-8
+	
+\usepackage{amsmath}	%Expressoes matematica	
+\usepackage{amssymb}
+\usepackage{microtype} 			
+\usepackage{morefloats}	
+\usepackage{mathrsfs}
+
+% Babel e ajustes
+\usepackage{booktabs}
+\usepackage{titlesec} %Padronizar os titulos
+\usepackage{bookmark}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+%\setlength\parindent{20pt}
+\usepackage{hyperref}  
+\usepackage{subfigure}
+\usepackage[titles,subfigure]{tocloft} 
+\usepackage{indentfirst}
+\usepackage{wrapfig}
+
+\usepackage{cases}
+\newtheorem{mydef}{Teorema}
+\newtheorem{mylema}{Lema}
+\newtheorem{myDef}{Definição}
+\newtheorem{exemplo}{Exemplo}
+\usepackage{arydshln}
+\pagestyle{myheadings}
+\markright{}  
+
+\usepackage{color}
+
+\usepackage{setspace}
+\usepackage{pslatex} %Fonte times new roman
+\usepackage[brazil]{babel}		
+\addto\captionsbrazil{
+    \renewcommand{\indexname}{\'Indice}
+    \renewcommand{\listfigurename}{\hfill \textbf{LISTA DE FIGURAS}\hfill\mbox{} \vspace{1cm}}
+    \renewcommand{\listtablename}{Lista de tabelas}
+    %% ajusta nomes usados com a macro \autoref
+    \renewcommand{\pageautorefname}{p\'agina}
+    \renewcommand{\sectionautorefname}{se{\c c}\~ao}
+    \renewcommand{\subsectionautorefname}{subse{\c c}\~ao}
+    \renewcommand{\paragraphautorefname}{par\'agrafo}
+    \renewcommand{\subsubsectionautorefname}{subse{\c c}\~ao}
+    \renewcommand{\paragraphautorefname}{subse{\c c}\~ao}
+    \renewcommand{\contentsname}{\hfill \textbf{SUMÁRIO} \hfill\mbox{} \vspace{1cm}}
+    %\renewcommand{\bibname}{REFERÊNCIA}
+    \renewcommand{\refname}{\hfill \textbf{REFER\^ENCIAS} \hfill\mbox{} \vspace{1cm}}
+}
+\RequirePackage{setspace}      % pacote para controlar o espacamento
+\onehalfspace                  % espacamento de 1,5 
+\setlength{\parindent}{1.25cm} % recuo do paragrafo
+%\numberwithin{equation}{section}     % numerar equação por seção 
+\pagenumbering{arabic} % estilo da numera das pg
+%Edita a lista de figuras
+\newlength{\mylen}
+\renewcommand{\cftfigpresnum}{\figurename\enspace}
+\renewcommand{\cftfigaftersnum}{\, - \,}
+\settowidth{\mylen}{\cftfigpresnum\cftfigaftersnum}
+\addtolength{\cftfignumwidth}{\mylen}
+
+\usepackage{color}
+\definecolor{thered}{rgb}{0.65,0.04,0.07}
+\definecolor{thegreen}{rgb}{0.06,0.44,0.08}
+\definecolor{thegrey}{gray}{0.5}
+\definecolor{theshade}{rgb}{1,1,0.97}
+\definecolor{theframe}{gray}{0.6}
+\definecolor{blue}{RGB}{41,5,195}
+
+\IfFileExists{listings.sty}{
+  \usepackage{listings}
+\usepackage{color} %red, green, blue, yellow, cyan, magenta, black, white
+\definecolor{mygreen}{RGB}{28,172,0} % color values Red, Green, Blue
+\definecolor{mylilas}{RGB}{170,55,241}
+\definecolor{myyellow}{RGB}{255,255,224}
+\lstset{language=Matlab,%
+    basicstyle=\ttfamily\small,
+    breaklines=true,%
+    morekeywords={matlab2tikz},
+    keywordstyle=\color{blue},%
+    morekeywords=[2]{1}, keywordstyle=[2]{\color{blue}},
+    identifierstyle=\color{black},%
+    stringstyle=\color{mylilas},
+    commentstyle=\color{mygreen},%
+    showstringspaces=false,%without this there will be a symbol in the places where there is a space
+    numbers=left,%
+    numberstyle={\tiny \color{black}},% size of the numbers
+    numbersep=9pt, % this defines how far the numbers are from the text
+    emph=[1]{for,end,break},emphstyle=[1]\color{blue}, %some words to emphasise
+    %emph=[2]{word1,word2}, emphstyle=[2]{style}, 
+    backgroundcolor=\color{myyellow},
+  breakautoindent=true, 
+  literate={á}{{\'a}}1 {ã}{{\~a}}1 {é}{{\'e}}1 {è}{{\`{e}}}1 {ê}{{\^{e}}}1 {ë}{{\¨{e}}}1 {É}{{\'{E}}}1 {Ê}{{\^{E}}}1 {û}{{\^{u}}}1 {ú}{{\'{u}}}1 {â}{{\^{a}}}1 {à}{{\`{a}}}1 {á}{{\'{a}}}1 {ã}{{\~{a}}}1 {Á}{{\'{A}}}1 {Â}{{\^{A}}}1 {Ã}{{\~{A}}}1 {ç}{{\c{c}}}1 {Ç}{{\c{C}}}1 {õ}{{\~{o}}}1 {ó}{{\'{o}}}1 {ô}{{\^{o}}}1 {Õ}{{\~{O}}}1 {Ó}{{\'{O}}}1 {Ô}{{\^{O}}}1 {î}{{\^{i}}}1 {Î}{{\^{I}}}1 {í}{{\'{i}}}1 {Í}{{\~{Í}}}1,
+}
+
+
+\let\verbatim\relax
+ 	\lstnewenvironment{verbatim}[1][]{\lstset{##1}}{}
+}
+
+%\usepackage[alf]{abntex2cite}	% citacoes
+\usepackage[abnt-emphasize=bf,alf]{abntex2cite}
+\setcounter{secnumdepth}{5}%5 seções
+\setcounter{tocdepth}{5}
+
+\usepackage{hyperref}
+\usepackage{atveryend}
+
+\renewcommand{\cftbeforesecskip}{0.5ex}% espaçamento entre as seções
+% poe linhas pontilhadas nas seções do sumario
+\renewcommand{\cftsecleader}{\normalfont\bfseries\cftdotfill{\cftsubsecdotsep}} %pontos em negrito
+%\renewcommand{\cftsecpagefont}{\normalfont\normalsize\bfseries}
+\renewcommand{\cftpartleader}{\normalfont\bfseries\cftdotfill{\cftsubsecdotsep}} %pg em negrito
+%\renewcommand{\cftpartpagefont}{\normalfont\normalsize\bfseries}
+\renewcommand{\cftsubsubsecleader}{\normalfont\bfseries\cftdotfill{\cftsubsecdotsep}}
+\renewcommand{\cftpartleader}{\normalfont\bfseries\cftdotfill{\cftsubsubsecdotsep}}
+\renewcommand{\cftsubsubsecpagefont}{\normalfont\normalsize\bfseries}
+
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+
+
+\newlength{\ABNTsignwidth}
+\setlength{\ABNTsignwidth}{8cm}
+\newlength{\ABNTsignthickness}
+\setlength{\ABNTsignthickness}{1pt}
+\newlength{\ABNTsignskip}
+\setlength{\ABNTsignskip}{1cm}
+\makeatletter
+\newcommand{\assinatura}{\@ifstar{\ABNTsign}{\ABNTcsign}}
+\makeatother
+% assinatura com estrela
+\newcommand{\ABNTsign}[1]{%
+  \parbox[t]{\ABNTsignwidth}{\singlespacing\vspace*{\ABNTsignskip}\centering%
+  \rule{\ABNTsignwidth}{\ABNTsignthickness}\\%
+  \nopagebreak #1\par}%
+}
+
+
+
+%Sem recuo no sumario
+%\renewcommand{\cftchapindent}{0pt}
+\usepackage[titles]{tocloft}
+%\cftsetindents{chapter}{0cm}{1.5cm}
+\cftsetindents{section}{0cm}{0.5cm}
+\cftsetindents{subsection}{0cm}{0.8cm}   
+\cftsetindents{subsubsection}{0cm}{1cm} 
+\cftsetindents{paragraph}{0cm}{1.4cm}
+\cftsetindents{figure}{0cm}{2.2cm} %espaçamento na lista de figuras
+%\cftsetindents{table}{0em}{3.5em}
+\renewcommand{\cftbeforesecskip}{1.0ex}% espaçamento entre as seções no sumario
+
+%editar as secoes 
+
+\renewcommand{\cfttoctitlefont}{\clearpage\thispagestyle{empty}\hfil\bf\MakeUppercase}
+\renewcommand{\cftloftitlefont}{\clearpage\thispagestyle{empty}\hfill\bf\MakeUppercase}
+\renewcommand{\cftlottitlefont}{\clearpage\thispagestyle{empty}\hfill\bf\MakeUppercase}
+\renewcommand{\cftafterloftitle}{\hfill}
+\renewcommand{\cftafterlottitle}{\hfill}
+
+\renewcommand{\cftsubsubsecfont}{\bfseries} %subsubsec em negrito
+
+\RequirePackage{pdfpages}
+\RequirePackage{ifthen}
+%\newcommand{\folhadeaprovacao}{
+%\iflogvar
+%  \includepdf{Doc1.pdf}
+%\else
+%  \clearpage\thispagestyle{empty}\mbox{}\vfill\begin{center}\begin{Huge}Folha de aprova\c{c}\~{a}o\end{Huge}\vfill%\end{center}
+%\fi
+%}
+
+\hypersetup{
+		colorlinks=true,
+    	linkcolor=black,
+    	citecolor=black,
+		urlcolor=black
+}
+
+\EnableCrossrefs
+\CodelineIndex
+\RecordChanges
+
+\usepackage[top = 3 cm, bottom = 2 cm, left= 3 cm, right=2 cm]{geometry} %Margens
+
+\titleformat*{\section}{\normalsize}
+\titleformat*{\subsection}{\normalsize}
+\titleformat*{\paragraph}{\normalsize}
+
+%\numberwithin{equation}{section} %irá prefixar o númeo da seção em todos os números das equações. 
